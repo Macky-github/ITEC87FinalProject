@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapuge Clothing</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: url('bgimage3.jpeg');
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+    }
+    .menu-container {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 80%;
+      max-width: 600px;
+      margin-top: 20px;
+      position: relative;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+    .menu-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .menu-item img {
+      width: 100px;
+      height: auto;
+      margin-right: 20px;
+    }
+    .item-details {
+      flex: 1;
+    }
+    .menu-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    .menu-buttons button {
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .menu-buttons button:hover {
+      background-color: #333;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <img src="logo.png" alt="Kapuge Clothing Logo" style="margin-top: 20px;">
+  <div class="menu-container">
+    <div class="menu-buttons">
+      <button onclick="showItems('items1')">Jeans</button>
+      <button onclick="showItems('items2')">T-Shirts</button>
+      <button onclick="showItems('items3')">Perfume</button>
+      <button onclick="showItems('items4')">Sandos</button>
+      <button onclick="showItems('items5')">Toys</button>
+    </div>
+        
+    <div id="items1" class="hidden">
+      <button onclick="goBack()">Back</button>
+      <br>  </br>
+      <div class="menu-item">
+        <img src="jeans1.jpeg" alt="Jeans 1">
+        <div class="item-details">
+          <h2>Jeans 1</h2>
+          <p>High-quality denim jeans.</p>
+          <p>Price: 300</p>
+          <p>Stock: <span id="stock1">10</span></p>
+          <input type="number" id="quantity1" value="1" min="1" max="10">
+          <button onclick="addToCart('Jeans 1', 300, 'quantity1', 'stock1')">Add to Cart</button>
+        </div>
+      </div> 
+      <div class="menu-item">
+        <img src="jeans2.jpeg" alt="Jeans 2">
+        <div class="item-details">
+          <h2>Jeans 2</h2>
+          <p>Stylish and comfortable jeans.</p>
+          <p>Price: 250</p>
+          <p>Stock: <span id="stock2">10</span></p>
+          <input type="number" id="quantity2" value="1" min="1" max="10">
+          <button onclick="addToCart('Jeans 2', 300, 'quantity2', 'stock2')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="jeans3.jpeg" alt="Jeans 3">
+        <div class="item-details">
+          <h2>Jeans 3</h2>
+          <p>Classic gray jeans.</p>
+          <p>Price: 350</p>
+          <p>Stock: <span id="stock3">10</span></p>
+          <input type="number" id="quantity3" value="1" min="1" max="10">
+          <button onclick="addToCart('Jeans 3', 300, 'quantity3', 'stock3')">Add to Cart</button>       </div>
+      </div> 
+      <div class="menu-item">
+        <img src="jeans4.jpeg" alt="Jeans 4">
+        <div class="item-details">
+          <h2>Jeans 4</h2>
+          <p>Fashionable ripped jeans.</p>
+          <p>Price: 400</p>
+          <p>Stock: <span id="stock4">10</span></p>
+          <input type="number" id="quantity4" value="1" min="1" max="10">
+          <button onclick="addToCart('Jeans 4', 300, 'quantity4', 'stock4')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+        
+    <div id="items2" class="hidden">
+      <button onclick="goBack()">Back</button>
+      <div class="menu-item">
+        <img src="shirt1.jpeg" alt="T-shirt 1">
+        <div class="item-details">
+          <h2>T-shirt 1</h2>
+          <p>High quality clothing.</p>
+          <p>Price: 450</p>
+          <p>Stock: <span id="stock5">10</span></p>
+          <input type="number" id="quantity5" value="1" min="1" max="10">
+          <button onclick="addToCart('T-shirt 1' , 300, 'quantity5', 'stock5')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="shirt2.jpeg" alt="T-shirt 2">
+        <div class="item-details">
+          <h2>T-shirt 2</h2>
+          <p>Comfortable clothing.</p>
+          <p>Price: 400</p>
+          <p>Stock: <span id="stock6">10</span></p>
+          <input type="number" id="quantity6" value="1" min="1" max="10">
+          <button onclick="addToCart('T-shirt 2', 300, 'quantity6', 'stock6')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="shirt3.jpeg" alt="T-shirt 3">
+        <div class="item-details">
+          <h2>T-shirt 3</h2>
+          <p>Classic shirt.</p>
+          <p>Price: 350</p>
+          <p>Stock: <span id="stock7">10</span></p>
+          <input type="number" id="quantity7" value="1" min="1" max="10">
+          <button onclick="addToCart('T-shirt 3', 300, 'quantity7', 'stock7')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="shirt4.jpeg" alt="T-shirt 4">
+        <div class="item-details">
+          <h2>T-shirt 4</h2>
+          <p>Fashionable clothing.</p>
+          <p>Price: 490</p>
+          <p>Stock: <span id="stock8">10</span></p>
+          <input type="number" id="quantity8" value="1" min="1" max="10">
+          <button onclick="addToCart('T-shirt 4', 300, 'quantity8', 'stock8')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+        
+    <div id="items3" class="hidden">
+      <button onclick="goBack()">Back</button>
+      <div class="menu-item">
+        <img src="perfume1.jpeg" alt="Perfume 1">
+        <div class="item-details">
+          <h2>Perfume 1</h2>
+          <p>High quality perfume.</p>
+          <p>Price: 800</p>
+          <p>Stock: <span id="stock9">10</span></p>
+          <input type="number" id="quantity9" value="1" min="1" max="10">
+          <button onclick="addToCart('Perfume 1', 300, 'quantity9', 'stock9')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="perfume2.jpeg" alt="Perfume 2">
+        <div class="item-details">
+          <h2>Perfume 2</h2>
+          <p>Nature essence.</p>
+          <p>Price: 1200</p>
+          <p>Stock: <span id="stock10">10</span></p>
+          <input type="number" id="quantity10" value="1" min="1" max="10">
+          <button onclick="addToCart('Perfume 2', 300, 'quantity10', 'stock10')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="perfume3.jpeg" alt="Perfume 3">
+        <div class="item-details">
+          <h2>Perfume 3</h2>
+          <p>Freshness of the sea.</p>
+          <p>Price: 999</p>
+          <p>Stock: <span id="stock11">10</span></p>
+          <input type="number" id="quantity11" value="1" min="1" max="10">
+          <button onclick="addToCart('Perfume 3', 300, 'quantity11', 'stock11')">Add to Cart</button>
+       </div>
+      </div>
+      <div class="menu-item">
+        <img src="perfume4.jpeg" alt="Perfume 4">
+        <div class="item-details">
+          <h2>Perfume 4</h2>
+          <p>Add a bit of heat.</p>
+          <p>Price: 550</p>
+          <p>Stock: <span id="stock12">10</span></p>
+          <input type="number" id="quantity12" value="1" min="1" max="10">
+          <button onclick="addToCart('Perfume 4', 300, 'quantity12', 'stock12')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+        
+    <div id="items4" class="hidden">
+      <button onclick="goBack()">Back</button>
+      <div class="menu-item">
+        <img src="sando1.jpeg" alt="Sando 1">
+        <div class="item-details">
+          <h2>Sando 1</h2>
+          <p>High quality sando.</p>
+          <p>Price: 100</p>
+          <p>Stock: <span id="stock13">10</span></p>
+          <input type="number" id="quantity13" value="1" min="1" max="10">
+          <button onclick="addToCart('Sando 1', 300, 'quantity13', 'stock13')">Add to Cart</button> 
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="sando2.jpeg" alt="Sando 2">
+        <div class="item-details">
+          <h2>Sando 2</h2>
+          <p>Best sando.</p>
+          <p>Price: 150</p>
+          <p>Stock: <span id="stock14">10</span></p>
+          <input type="number" id="quantity14" value="1" min="1" max="10">
+          <button onclick="addToCart('Sando 2', 300, 'quantity14', 'stock14')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="sando3.jpeg" alt="Sando 3">
+        <div class="item-details">
+          <h2>Sando 3</h2>
+          <p>Classic sando.</p>
+          <p>Price: 50</p>
+          <p>Stock: <span id="stock15">10</span></p>
+          <input type="number" id="quantity15" value="1" min="1" max="10">
+          <button onclick="addToCart('Sando 3', 300, 'quantity15', 'stock15')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="sando4.jpeg" alt="Sando 4">
+        <div class="item-details">
+          <h2>Sando 4</h2>
+          <p>New fashion.</p>
+          <p>Price: 70</p>
+          <p>Stock: <span id="stock16">10</span></p>
+         <input type="number" id="quantity16" value="1" min="1" max="10">
+          <button onclick="addToCart('Sando 4', 300, 'quantity16', 'stock16')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+        
+    <div id="items5" class="hidden">
+      <button onclick="goBack()">Back</button>
+      <div class="menu-item">
+        <img src="toy1.jpeg" alt="Toy 1">
+        <div class="item-details">
+          <h2>Toy 1</h2>
+          <p>High quality toy.</p>
+          <p>Price: 2500</p>
+          <p>Stock: <span id="stock17">10</span></p>
+         <input type="number" id="quantity17" value="1" min="1" max="10">
+          <button onclick="addToCart('Toy 1', 300, 'quantity17', 'stock17')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="toy2.jpeg" alt="Toy 2">
+        <div class="item-details">
+          <h2>Toy 2</h2>
+          <p>Best robot toy.</p>
+          <p>Price: 1200</p>
+          <p>Stock: <span id="stock18">10</span></p>
+          <input type="number" id="quantity18" value="1" min="1" max="10">
+          <button onclick="addToCart('Toy 2', 300, 'quantity18', 'stock18')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="toy3.jpeg" alt="Toy 3">
+        <div class="item-details">
+          <h2>Toy 3</h2>
+          <p>Classic toy.</p>
+          <p>Price: 3500</p>
+          <p>Stock: <span id="stock19">10</span></p>
+          <input type="number" id="quantity19" value="1" min="1" max="10">
+          <button onclick="addToCart('Toy 3', 300, 'quantity19', 'stock19')">Add to Cart</button>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="toy4.jpeg" alt="Toy 4">
+        <div class="item-details">
+          <h2>Toy 4</h2>
+          <p>Special toy.</p>
+          <p>Price: 3700</p>
+          <p>Stock: <span id="stock20">10</span></p>
+          <input type="number" id="quantity20" value="1" min="1" max="10">
+          <button onclick="addToCart('Toy 4', 300, 'quantity20', 'stock20')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+        
+    <h3>Cart</h3>
+    <ul id="cart"></ul>
+    <p id="total-price"></p>
+  </div>
+
+  <script>
+    function showItems(itemId) {
+      const itemSections = document.querySelectorAll('.menu-container > div');
+      itemSections.forEach(section => {
+        section.classList.add('hidden');
+      });
+      document.getElementById(itemId).classList.remove('hidden');
+    }
+
+    function goBack() {
+      const itemSections = document.querySelectorAll('.menu-container > div');
+      itemSections.forEach(section => {
+        section.classList.add('hidden');
+      });
+      document.querySelector('.menu-buttons').classList.remove('hidden');
+    }
+
+const cart = [];
+
+    function addToCart(itemName, itemPrice, quantityId, stockId) {
+      const quantityInput = document.getElementById(quantityId);
+      const stockSpan = document.getElementById(stockId);
+      const quantity = parseInt(quantityInput.value);
+      const stock = parseInt(stockSpan.textContent);
+
+      if (quantity > stock) {
+        alert(`Only ${stock} item(s) available.`);
+        return;
+      }
+
+      const remainingStock = stock - quantity;
+      stockSpan.textContent = remainingStock;
+
+      cart.push({ name: itemName, price: itemPrice, quantity: quantity });
+      updateCart();
+    }
+
+function updateCart() {
+      const cartElement = document.getElementById('cart');
+      cartElement.innerHTML = '';
+      let totalPrice = 0;
+      cart.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.name} - $${item.price} x ${item.quantity}`;
+        cartElement.appendChild(listItem);
+        totalPrice += item.price * item.quantity;
+      });
+      document.getElementById('total-price').textContent = `Total: $${totalPrice}`;
+    }
+
+  </script>
+</body>
+</html>
+

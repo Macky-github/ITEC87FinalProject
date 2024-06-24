@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+ 
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    body {
+      background-image: url('BG.gif');
+      background-size: auto;
+      color: #000;
+      font-family: 'Roboto', sans-serif;
+    }
+    .navbar {
+      background-color: #00CED1;
+    }
+    .navbar-brand {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    .navbar-brand img {
+      border-radius: 50%;
+      margin-right: 10px;
+      width: 40px;
+      height: 40px;
+    }
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .jumbotron {
+      background-image: url('background.gif'); 
+      background-size: auto;
+      background-position: center;
+      padding: 3rem;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 3rem;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    }
+    .link-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .activity-card {
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+      height: 90%;
+    }
+    .activity-card:hover {
+      transform: translateX(-20px);
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); 
+    }
+    .activity-label {
+      font-size: 20px;
+      color: #333; 
+      margin-top: 1rem;
+    }
+    .activity-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    .activity-card .img-fluid {
+      width: 400px; 
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="#">
+    <img src="macky.jpeg" alt="Profile Picture">
+    Macky's Website
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="activity-card">
+          <img src="reg1.png" class="img-fluid" alt="Registration">
+          <p class="activity-label">Registration</p>
+          <a href="Registration.html" class="btn btn-primary">View Project</a> 
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="activity-card">
+          <img src="store1.png" class="img-fluid" alt="Store">
+          <p class="activity-label">Store</p>
+          <a href="Store.html" class="btn btn-primary">View Project</a> 
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="activity-card">
+          <img src="resume1.png" class="img-fluid" alt="Certificate of Registration">
+          <p class="activity-label">Resume</p>
+          <a href="MACKY_RESUME.html" class="btn btn-primary">View Project</a> 
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="activity-card">
+          <img src="sari-sari_store.png" class="img-fluid" alt="Sari-Sari Store">
+          <p class="activity-label">Sari-Sari Store</p>
+          <a href="Sari-sari_Store.html" class="btn btn-primary">View Project</a> 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

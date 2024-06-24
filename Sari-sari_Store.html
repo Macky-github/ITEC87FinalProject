@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Menu</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2; 
+    }
+    h1 {
+        text-align: center;
+        color: black; 
+        margin-top: 20px;
+    }
+    .menu-container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: light grey; 
+        padding: 20px;
+        border-radius: 10px; 
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    }
+    .menu-buttons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .menu-button {
+        margin: 5px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: #fff; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .menu-button:hover {
+        background-color: #45a049; 
+    }
+    .menu-images {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menu-image-container {
+        text-align: center;
+        margin: 10px;
+    }
+    .menu-image {
+        width: 150px;
+        height: auto;
+        border-radius: 10px;
+    }
+    .menu-image-caption {
+        margin-top: 5px;
+        color: #777; 
+    }
+</style>
+
+</head>
+<body>
+    <h1>MY MENU</h1>
+
+    <div class="menu-container">
+        <div class="menu-buttons">
+            <button class="menu-button" onclick="showCategory('main-dish')">Main Dish</button>
+            <button class="menu-button" onclick="showCategory('vegetables')">Vegetables</button>
+            <button class="menu-button" onclick="showCategory('desserts')">Dessert</button>
+            <button class="menu-button" onclick="showCategory('drinks')">Drinks</button>
+            <button class="menu-button" onclick="showCategory('add-ons')">Add-ons</button>     
+        </div>
+
+        <div id="main-dish" class="menu-images">
+            <div class="menu-image-container">
+                <img class="menu-image" src="MainDish/Bulalo.jpeg" alt="Bulalo">
+                <p class="Bulalo">BULALO - $100</p>
+            </div>
+          
+          <div class="menu-image-container">
+                <img class="menu-image" src="MainDish/Sisig.jpeg" alt="Sisig">
+                <p class="PorkSisig">PORK SISIG - $120</p>
+            </div>
+          
+          <div class="menu-image-container">
+                <img class="menu-image" src="MainDish/Chickencurry.jpeg" alt="Chickencurry">
+                <p class="ChickenCurry">CHICKEN CURRY - $110</p>
+            </div>
+          
+          <div class="menu-image-container">
+                <img class="menu-image" src="MainDish/Menudo.jpeg" alt="Menudo">
+                <p class="Menudo">MENUDO - $90</p>
+            </div>
+          
+          <div class="menu-image-container">
+                <img class="menu-image" src="MainDish/Sinigang.jpeg" alt="Sinigang">
+                <p class="Sinigang">SINIGANG - $99</p>
+            </div>
+        </div>
+
+        <div id="vegetables" class="menu-images">
+            <div class="menu-image-container">
+                <img class="menu-image" src="Vegetables/Sitaw.jpeg" alt="Sitaw">
+                <p class="Sitaw">SITAW - $69</p>
+            </div>
+          
+            <div class="menu-image-container">
+                <img class="menu-image" src="Vegetables/Monggo.jpeg" alt="Monggo">
+                <p class="Monggo">MONGGO - $59</p>
+            </div>
+          
+            <div class="menu-image-container">
+                <img class="menu-image" src="Vegetables/Chopseuy.jpeg" alt="Chopseuy">
+                <p class="Chopseuy">CHOPSEY - $49</p>
+            </div>
+        </div>
+          
+        <div id="desserts" class="menu-images">
+            <div class="menu-image-container">
+                <img class="menu-image" src="Desserts/Cake.jpeg" alt="Cake">
+                <p class="Cake">CAKE - $190</p>
+            </div>
+          
+             <div class="menu-image-container">
+                <img class="menu-image" src="Desserts/icecream.jpeg" alt="Icecream">
+                <p class="Icecream">ICE CREAM - $150</p>
+            </div>
+          
+             <div class="menu-image-container">
+                <img class="menu-image" src="Desserts/Salad.jpeg" alt="Salad">
+                <p class="Salad">SALAD - $100</p>
+            </div>
+        </div>
+        
+        <div id="drinks" class="menu-images">
+            <div class="menu-image-container">
+                <img class="menu-image" src="drinks/Coke.jpeg" alt="Coke">
+                <p class="Coke">COKE - $79</p>
+              
+            <div class="menu-image-container">
+                <img class="menu-image" src="drinks/sprite.jpeg" alt="sprite">
+                <p class="sprite">SPRITE - $79</p>
+              
+            <div class="menu-image-container">
+                <img class="menu-image" src="drinks/icetea.jpeg" alt="icetea">
+                <p class="icetea">ICE TEA - $49</p>
+            </div>
+        </div>
+		
+		<div id="add-ons" class="menu-images">
+            <div class="menu-image-container">
+                <img class="menu-image" src="Addons/pizza.jpeg" alt="pizza">
+                <p class="pizza">PIZZA - $129</p>
+              
+            <div class="menu-image-container">
+                <img class="menu-image" src="Addons/footlong.jpeg" alt="footlong">
+                <p class="footlong">FOOTLONG - $100</p>
+              
+            <div class="menu-image-container">
+                <img class="menu-image" src="Addons/fries.jpeg" alt="fries">
+                <p class="fries">FRIES - $100</p>
+            </div>
+        </div> 
+		
+		<script>
+    function showCategory(category) {
+        var menuImages = document.querySelectorAll('.menu-images');
+        for (var i = 0; i < menuImages.length; i++) {
+            menuImages[i].style.display = 'none';
+        }
+        document.getElementById(category).style.display = 'block';
+    }
+
+    function orderItem(item) {
+        alert('You ordered ' + item);
+        // You can implement further logic here, like adding the item to a cart or processing the order
+    }
+</script>
+</body>
+</html>

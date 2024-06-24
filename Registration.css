@@ -1,0 +1,30 @@
+Body{
+	Background-color: lightyellow;
+}
+P{
+	Text-align: center;
+	Color: darkred;
+	Font-family:”Arial”;
+}
+H1{
+	Font-family: “Arial”;
+	Color: darkred;
+	Font-weight: bolder;
+	Text-align: center;
+
+}
+H2{
+	Font-family: “Arial”;
+	Text-align: center;
+}
+Caption{
+	Font-family:”Arial”;
+	Background-color:darkred;
+	Color: white;
+	Text-align:center;	
+	Font-weight: bold;
+}
+Td{
+	Font-family:”Arial”;
+	Font-size:15px;
+}
